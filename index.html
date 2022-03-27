@@ -7,10 +7,74 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, max-scale=1.0"
     />
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/index.css" />
     <title>Sign Up Form</title>
   </head>
   <body>
-
+    <div class="panel right-panel">
+      <h1 class="right-panel__logo logo">
+        <img src="/img/odin-lined.png" alt="odin logo" class="logo__img" /><span
+          class="logo__text"
+          >ODIN</span
+        >
+      </h1>
+      <p class="right-panel__pic-credit">Photo by <a href="" class="right-panel__link">Halie West</a> on <a href="" class="right-panel__link">Unsplash</a></p>
+    </div>
+    <div class="panel left-panel">
+      <p class="left-panel__description"></p>
+      <form id="my-form" action="" class="form">
+        <h1 class="form__heading">Let's do this!</h1>
+        <label for="item1" class="form__label">FIRST NAME</label
+        ><input
+          type="text"
+          class="form__input"
+          id="item1"
+          placeholder=" "
+          required="true"
+        /><span class="form__error"></span
+        ><label for="item2" class="form__label">LAST NAME</label
+        ><input
+          type="text"
+          class="form__input"
+          id="item2"
+          placeholder=" "
+          required="true"
+        /><span class="form__error"></span
+        ><label for="item3" class="form__label">EMAIL</label
+        ><input
+          type="text"
+          class="form__input"
+          id="item3"
+          placeholder=" "
+          required="true"
+        /><span class="form__error"></span
+        ><label for="item4" class="form__label">PHONE NUMBER</label
+        ><input
+          type="text"
+          class="form__input"
+          id="item4"
+          placeholder=" "
+          required="true"
+        /><span class="form__error"></span
+        ><label for="item5" class="form__label">PASSWORD</label
+        ><input
+          type="text"
+          class="form__input"
+          id="item5"
+          placeholder=" "
+          required="true"
+        /><span class="form__error"></span
+        ><label for="item6" class="form__label">CONFIRM PASSWORD</label
+        ><input
+          type="text"
+          class="form__input"
+          id="item6"
+          placeholder=" "
+          required="true"
+        /><span class="form__error"></span>
+      </form>
+<div class="left-panel__bottom-container">
+  <input type="submit" value="Create Account" class="form__submit"></input><span class="form__login-already">Already have an account?<span class="form__login-link">Log in</span></span></div>
+    </div>
   </body>
 </html>
