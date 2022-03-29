@@ -32,7 +32,7 @@ body {
   color: white;
   &__ {
     &logo {
-      margin-top: 64%;
+      margin-top: 12rem;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 0.7rem;
       display: flex;
@@ -160,6 +160,43 @@ body {
       color: green;
       font-weight: bold;
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: 9rem;
+    &__ {
+      &logo {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .right-panel {
+    &__ {
+      &description {
+        padding-top: 2rem;
+      }
+    }
+  }
+  .form {
+    &__ {
+      &entry-items {
+        align-items: start;
+        margin-left: -0.7rem;
+        & > :last-child {
+          padding-left: 0.5rem;
+        }
+      }
+      &item{
+        width: 9.5rem;
+      }
     }
   }
 }
