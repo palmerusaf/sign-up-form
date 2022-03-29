@@ -29,57 +29,91 @@
       </p>
       <form id="my-form" action="" class="form">
         <h1 class="form__heading">Let's do this!</h1>
-        <label for="item1" class="form__label">FIRST NAME</label
-        ><input
-          type="text"
-          class="form__input"
-          id="item1"
-          placeholder=" "
-          required="true"
-        /><span class="form__error"></span
-        ><label for="item2" class="form__label">LAST NAME</label
-        ><input
-          type="text"
-          class="form__input"
-          id="item2"
-          placeholder=" "
-          required="true"
-        /><span class="form__error"></span
-        ><label for="item3" class="form__label">EMAIL</label
-        ><input
-          type="text"
-          class="form__input"
-          id="item3"
-          placeholder=" "
-          required="true"
-        /><span class="form__error"></span
-        ><label for="item4" class="form__label">PHONE NUMBER</label
-        ><input
-          type="text"
-          class="form__input"
-          id="item4"
-          placeholder=" "
-          required="true"
-        /><span class="form__error"></span
-        ><label for="item5" class="form__label">PASSWORD</label
-        ><input
-          type="text"
-          class="form__input"
-          id="item5"
-          placeholder=" "
-          required="true"
-        /><span class="form__error"></span
-        ><label for="item6" class="form__label">CONFIRM PASSWORD</label
-        ><input
-          type="text"
-          class="form__input"
-          id="item6"
-          placeholder=" "
-          required="true"
-        /><span class="form__error"></span>
+        
+        <div class="form__entry-items">
+          <div>
+            <div class="form__item">
+              <label for="item1" class="form__label">FIRST NAME</label
+              ><input
+                type="text"
+                class="form__input"
+                id="item1"
+                placeholder=" "
+                pattern="^([A-Z][a-z]+([ ]?[a-z]?['-]?[A-Z][a-z]+)*)$"
+                required="true"
+              /><span class="form__error"></span
+              >
+            </div>
+          
+            <div class="form__item">
+              <label for="item3" class="form__label">EMAIL</label
+              ><input
+                type="email"
+                class="form__input"
+                id="item3"
+                placeholder=" "
+                required="true"
+              /><span class="form__error"></span
+              >
+            </div>
+          
+            <div class="form__item">
+              <label for="item5" class="form__label">PASSWORD</label
+              ><input
+                type="password"
+                class="form__input"
+                id="item5"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                placeholder=" "
+                required="true"
+              /><span class="form__error"></span
+              >
+            </div>
+          </div>
+          
+          <div>
+            <div class="form__item">
+              <label for="item2" class="form__label">LAST NAME</label
+              ><input
+                type="text"
+                pattern="^([A-Z][a-z]+([ ]?[a-z]?['-]?[A-Z][a-z]+)*)$"
+                class="form__input"
+                id="item2"
+                placeholder=" "
+                required="true"
+              /><span class="form__error"></span
+              >
+            </div>
+          
+            <div class="form__item">
+              <label for="item4" class="form__label">PHONE NUMBER</label
+              ><input
+                type="tel"
+                class="form__input"
+                id="item4"
+                placeholder=" "
+                pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
+                required="true"
+              /><span class="form__error"></span
+              >
+            </div>
+            <div class="form__item">
+              <label for="item6" class="form__label">CONFIRM PASSWORD</label
+              ><input
+                type="password"
+                class="form__input"
+                id="item6"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                placeholder=" "
+                required="true"
+              /><span class="form__error"></span>
+            </div>
+          </div>
+        </div>
+
       </form>
 <div class="right-panel__bottom-container">
-  <input type="submit" value="Create Account" class="form__submit"></input><span class="form__login-already">Already have an account?<span class="form__login-link">Log in</span></span></div>
+  <input type="submit" value="Create Account" class="form__submit" form="my-form"></input><span class="form__login-already">Already have an account?<a href="http://" target="_blank" rel="noopener noreferrer" class="form__login-link">Log in</a></span></div>
     </div>
   </body>
 </html>

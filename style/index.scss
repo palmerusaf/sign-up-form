@@ -3,6 +3,8 @@
   src: url("/font/Norse-Bold.otf");
 }
 
+$shadow: 0px 7px 11px -9px rgba(0, 0, 0, 0.39);
+
 * {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 0;
@@ -61,6 +63,103 @@ body {
   }
 }
 
-.right-panel{
+.right-panel {
+  & > * {
+    padding: 0 2rem;
+  }
+  &__ {
+    &description {
+      padding: 2rem;
+      padding-top: 6rem;
+      font-weight: bold;
+      background-color: #f9fafb;
+    }
+    &bottom-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding-top: 1.3rem;
+      background-color: #f9fafb;
+    }
+  }
+}
 
+.form {
+  position: relative;
+  box-shadow: $shadow;
+  &__ {
+    &heading {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+    &entry-items {
+      display: flex;
+      & > :last-child {
+        padding-left: 3rem;
+      }
+    }
+    &item {
+      display: flex;
+      flex-direction: column;
+    }
+    &label {
+      font-size: 0.64rem;
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+    }
+    &input {
+      border-radius: 5px;
+      border: solid 1px gray;
+      height: 1.3rem;
+      padding-left: 0.3rem;
+      &:focus {
+        outline: solid 1px #8b98cf;
+        box-shadow: $shadow;
+      }
+      &:invalid:not(:focus):not(:placeholder-shown) {
+        outline: solid 1px red;
+        &[type="email"] + .form__error::before {
+          content: "* Invalid email.";
+        }
+        &[type="tel"] + .form__error::before {
+          content: "* Invalid phone number.";
+        }
+        &[type="password"] + .form__error::before {
+          content: "* Invalid password.";
+        }
+        &[type="text"] + .form__error::before {
+          content: "* Invalid name.";
+        }
+      }
+    }
+    &error {
+      margin-bottom: 1.5rem;
+      color: red;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 0.9rem;
+      &::before {
+        position: absolute;
+      }
+    }
+    &submit {
+      padding: 0.5rem 2rem;
+      cursor: pointer;
+      box-shadow: 0px 2px 8px -4px rgba(0, 0, 0, 0.33);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      background-color: #596d4b;
+    }
+    &login-already {
+      padding-top: 1.3rem;
+      font-size: 0.9rem;
+    }
+    &login-link {
+      margin-left: 0.3rem;
+      color: green;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
 }
